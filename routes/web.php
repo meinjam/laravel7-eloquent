@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/users', 'UserController@index')->name('users');
-// Route::get('/numbers', 'PhoneController@index')->name('numbers');
+Route::get('/numbers', 'PhoneController@index')->name('numbers');
 // Route::get('/posts', 'PostController@index')->name('posts');
 
 // Route::get('/posts/user/{id}', 'PostController@');
