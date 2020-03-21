@@ -14,7 +14,14 @@ class PhoneController extends Controller
      */
     public function index()
     {
-        //
+        $phones = Phone::all();
+        return view('phones', compact('phones'));
+
+        // $phones = DB::table('phones')
+        //     ->join('users', 'phones.user_id', 'users.id')
+        //     ->select('phones.*', 'users.name', 'users.email')
+        //     ->get();
+        // return view('phones', compact('phones'));
     }
 
     /**

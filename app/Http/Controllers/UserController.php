@@ -4,35 +4,27 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use DB;
 
 class UserController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('users', compact('users'));
+
+        // $users = DB::table('users')
+        //     ->join('phones', 'users.id', 'phones.user_id')
+        //     ->select('users.*', 'phones.phone')
+        //     ->get();
+        // return view('users', compact('users'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //

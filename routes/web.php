@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/users', 'UserController@index')->name('users');
+// Route::get('/numbers', 'PhoneController@index')->name('numbers');
+// Route::get('/posts', 'PostController@index')->name('posts');
+
+// Route::get('/posts/user/{id}', 'PostController@');
+
+// Route::get('/joti', 'PostController@userposts');
